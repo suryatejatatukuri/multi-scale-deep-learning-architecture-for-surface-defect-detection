@@ -1,0 +1,55 @@
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Training outputs and model checkpoints
+outputs/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Logs
+*.log
+runs/
+lightning_logs/
+
+# Dataset images and archives
+dataset/
+data/
+*.zip
+*.7z
+*.rar
+
+# Temporary files
+*.tmp
+*.temp
