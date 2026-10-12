@@ -1,36 +1,30 @@
-# Multi Scale Deep Learning Architecture for Surface Defect Detection
+# Multi-Scale Deep Learning Architecture for Surface Defect Detection
 
 ## Overview
+This project implements a multi-scale deep learning architecture for detecting surface defects in manufacturing images. The model uses parallel convolution branches to learn features at different scales and classify images as defective or non-defective.
 
-This project aims to develop a multi-scale deep learning architecture for detecting surface defects in manufacturing images. It is designed to explore defect classification using image features at different spatial scales.
+## Features
+- Multi-scale convolutional neural network using PyTorch
+- Image classification into Defective and Non-Defective categories
+- Training and validation support
+- Model checkpoint saving
+- Evaluation using a classification report and confusion matrix
+- Prediction on individual images
 
-## Objectives
-
-- Develop a deep learning model for surface defect detection.
-- Extract visual features at multiple scales.
-- Train and validate the model using labeled image data.
-- Evaluate model performance using standard classification metrics.
-- Visualize predictions and evaluation results.
-
-## Technologies
-
-- Python
-- PyTorch
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-learn
-- Pillow
-
-## Planned Project Structure
-
+## Project Structure
 ```text
-multi-scale-deep-learning-architecture-for-surface-defect-detection/
+.
 ├── dataset/
 │   ├── train/
+│   │   ├── Defective/
+│   │   └── Non-Defective/
 │   └── val/
+│       ├── Defective/
+│       └── Non-Defective/
 ├── models/
+│   ├── __init__.py
 │   └── multi_scale_model.py
+├── outputs/
 ├── train.py
 ├── evaluate.py
 ├── predict.py
@@ -39,32 +33,51 @@ multi-scale-deep-learning-architecture-for-surface-defect-detection/
 └── README.md
 ```
 
-## Methodology
+## Requirements
+- Python 3.10 or compatible version
+- PyTorch
+- torchvision
+- NumPy
+- Matplotlib
+- scikit-learn
+- Pillow
 
-1. Prepare and organize labeled surface images.
-2. Preprocess and resize images for model input.
-3. Extract image features at multiple scales.
-4. Train the deep learning model using training images.
-5. Validate the model on separate validation images.
-6. Evaluate predictions using appropriate performance metrics.
+## Installation
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Dataset Preparation
+Place your images in the appropriate folders:
+
+- `dataset/train/Defective/`
+- `dataset/train/Non-Defective/`
+- `dataset/val/Defective/`
+- `dataset/val/Non-Defective/`
+
+Use labeled images that represent both classes. The dataset folders currently contain placeholders; actual images must be added before training.
+
+## Training
+```bash
+python train.py
+```
 
 ## Evaluation
+```bash
+python evaluate.py
+```
 
-The completed implementation will aim to report metrics such as accuracy, precision, recall, F1-score, and a confusion matrix where applicable.
+## Prediction
+```bash
+python predict.py path/to/image.jpg
+```
 
-Actual evaluation results will be added after the model has been trained and tested.
+Check the scripts for their expected arguments and configuration before running them.
 
-## Project Status
+## Disclaimer
+Model performance depends on the quality, diversity, and labeling of the dataset.
 
-Initial documentation created. Model implementation, dataset preparation, training, and evaluation are to be completed and verified.
-
-## Future Enhancements
-
-- Add support for additional defect categories.
-- Improve model performance and generalization.
-- Generate prediction visualizations.
-- Explore deployment through a simple user interface.
-
-## Author
-
-Add your name and professional contact links here.
+## License
+This project is licensed under the MIT License.
